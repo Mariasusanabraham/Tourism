@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <title>Kerala Tourism</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.cssyb b   bn"
+    />
+
+    <style>
+      .navbar {
+        background-color: darkblue;
+        height: 70px;
+        cursor: pointer;
+      }
+
+      .nav-link {
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    {% block title %} {% endblock %}
+    <nav class="navbar navbar-expand-lg">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="http://127.0.0.1:8000/explore/"
+              >EXPLORE KERALA
+            </a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">WHERE TO STAY</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="http://127.0.0.1:8000/places/"
+              >PLACES TO VISIT</a
+            >
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">PLAN YOUR TRIP</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">E-BROCHURES</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">E-NEWSLETTERS</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">TRAVEL CARE</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="http://127.0.0.1:8000/show/">REGISTER</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="http://127.0.0.1:8000/show_log/">LOGIN</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+
+    <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".nav-toggle").click(function () {
+          var collapse_content_selector = $(this).attr("href");
+          var toggle_switch = $(this);
+          $(collapse_content_selector).toggle(function () {
+            if ($(this).css("display") == "none") {
+              toggle_switch.html("Read More");
+            } else {
+              toggle_switch.html("Read Less");
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

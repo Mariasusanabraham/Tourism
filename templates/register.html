@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-image: url("{% static 'images/img_1.png' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-resolution: inherit;
+  }
+  #reg {
+    left: 76px;
+    position: relative;
+    cursor: pointer;
+  }
+  #reg1 {
+    color: green;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: transparent;
+  }
+  #reg1:hover {
+    background-color: lightgreen;
+    color: black;
+  }
+  #reg2 {
+    left: 112px;
+    position: relative;
+    cursor: pointer;
+  }
+  #reg3 {
+    left: 73px;
+    position: relative;
+    cursor: pointer;
+  }
+  #reg4 {
+    position: relative;
+    cursor: pointer;
+  }
+  form {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border: 1px transparent;
+    padding: 50px;
+  }
+  form:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<form action="/save/" method="post" autocomplete="off">
+  {% csrf_token %}
+  <h2><i>REGISTER USER</i></h2>
+  <hr />
+  <b>FULLNAME:</b>
+  <input type="text" name="name" id="reg" /><br /><br />
+  <b>EMAIL:</b>
+  <input type="email" name="email" id="reg2" /><br /><br />
+  <b>PASSWORD:</b>
+  <input type="password" name="password" id="reg3" /><br /><br />
+  <b>CONFIRM PASSWORD:</b>
+  <input type="password" name="confirm" id="reg4" /><br /><br />
+  <button type="submit" id="reg1"><i class="fas fa-database"></i>SUBMIT</button>
+</form>
+{% for message in messages %} {{ message }} {% endfor %} {% endblock %}

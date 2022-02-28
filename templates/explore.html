@@ -1,0 +1,253 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<style>
+  img {
+    width: 100%;
+    height: 400px;
+    image-resolution: inherit;
+  }
+  #li {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  #a {
+    color: black;
+    text-decoration: none;
+  }
+  footer {
+    background-color: lightgrey;
+    text-align: center;
+    position: relative;
+  }
+  ul {
+    list-style-type: none;
+  }
+  p {
+    font-style: normal;
+    font-size: 17px;
+    line-height: 23px;
+    color: #62637c;
+    font-family: "SFProDisplay-Regular";
+    display: block;
+    font-weight: normal;
+  }
+
+  #a1 {
+    text-decoration: none;
+    border: 1px solid blue;
+    border-radius: 12px;
+    padding: 5px;
+    color: blue;
+  }
+  #ul {
+    list-style-type: disc;
+    color: blue;
+  }
+  #mail {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #email {
+    text-align: center;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 30%;
+    height: 40px;
+  }
+  .section {
+    background-color: lightblue;
+    text-align: center;
+  }
+  #button {
+    border-radius: 20px;
+    background-color: blue;
+    color: black;
+    width: 5%;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  #button:hover {
+    background-color: lightblue;
+  }
+</style>
+<img src="{% static 'images/places/img_7.png' %}" />
+<nav class="header-menu">
+  <ul class="side-menu">
+    <li id="li">
+      <a class="px-4" href="#" id="a">Travel Desk</a> |
+      <a class="px-4" href="#" id="a">How to</a> |
+      <a class="px-4" href="#" id="a">What's New</a> |
+      <a class="px-4" href="#" id="a">Festivals</a> |
+      <a class="px-4" href="#" id="a">Media Room</a> |
+      <a class="px-4" href="#" id="a">Governmental Affairs</a> |
+      <a class="px-4" href="#" id="a">Subscribe</a>
+    </li>
+  </ul>
+</nav>
+<div class="container">
+  <h2>About Kerala Tourism</h2>
+  <br />
+  <p>
+    Encompassing serenity, Kerala is a charming South Indian destination that
+    should be in every traveller’s bucket list. Adorned with the emerald
+    backwaters, sprawling and lush tea estates, pristine hill stations, and
+    azure Arabian Sea, Kerala tourism boasts numerous tourist places with which
+    you will fall in love instantly.
+  </p>
+  <p>
+    In North Kerala, districts like Kasaragod, Kannur, Wayanad, Kozhikode, and
+    Malappuram have many attractions for the tourists. Wayanad offers a lovely
+    hill station holiday whereas Kozhikode offers a great beach holiday and an
+    opportunity of bird watching.
+  </p>
+  <div id="collapse" style="display: none">
+    <p>
+      Central Kerala, Palakkad, Thrissur, Ernakulam, and Idukki have a number of
+      experiences in store. Thrissur is a culture aficionado’s paradise while
+      Idukki and Ernakulam are the hotspots for nature lovers.
+    </p>
+    <p>
+      In South Kerala Kottayam, Pathanamthitta, Alappuzha, Kollam,
+      Thiruvananthapuram are ready with a variety of experiences like backwaters
+      and houseboat in Alappuzha; beach vacations in Kollam, and a glance at
+      rich history of Kerala at Pathanamthitta.
+    </p>
+    <p>
+      Kerala tourism isn’t only about imbibing natural beauty but its rich
+      culture that is festooned with dances, festivals, delectable cuisine,
+      literature, Ayurveda therapies, and art &amp; craft. Kerala has it all,
+      and you have to see it, to believe it.
+    </p>
+    <p>
+      The state opens its doors to beach holidays with picturesque beaches like
+      Varkala, Kovalam and Marari. Giving a good run to pristine beaches are the
+      backwaters of Kerala that can be best experienced in Alleppey and
+      Kumarakom.
+    </p>
+    <p>
+      Kerala's beach and backwaters are accompanied by its lush and surreal hill
+      stations, of which Munnar, Wayanad and Vagamon are the best places to
+      visit in the summer season. With Western Ghats covering some of its area,
+      Kerala is the best wildlife destination and is perfect for birdwatching.
+    </p>
+    <p>
+      We, at Tour My India would be happy to help you explore the scenic
+      destination of Kerala, and therefore, offer to you the finest Kerala
+      holiday packages and deals. With our best Kerala travel packages, you can
+      rest assured for a hassle free and memorable holiday in Kerala.
+    </p>
+    <h3>List of Top 10 Most Visited Tourist Destinations of Kerala</h3>
+    <ul id="ul">
+      <li>
+        <p>
+          <strong><i>Alleppey:</i></strong> Kerala’s favourite backwater tourist
+          destination, Alleppey is famed for offering an incredible experience
+          of staying and cruising in a traditional houseboat.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><i>Munnar:</i></strong> Adorned with myriad tea estates and
+          rolling hills, Munnar is without a doubt the best hill station in
+          Kerala. It is a must visit tourist place in Kerala for a relaxing
+          holiday as well as relishing adventure activities.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><i>Kochi:</i></strong> A cosmopolitan city with a bustling
+          port, Kochi is where the modern lifestyle meets the traditional one.
+          The city is the perfect reflection of Kerala and has many experiences
+          up its sleeves.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><i>Thekkady:</i></strong> Fringing the popular Periyar
+          National Park, Thekkady is a hill station in Kerala that attracts many
+          nature and wildlife lovers. It is one of the best places to enjoy the
+          scenic beauty of Kerala.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><i>Thrissur:</i></strong> The cultural capital, Thrissur does
+          not need an introduction. From drawing a large crowd on its Temple
+          Festival (Thrissur Pooram) to being an abode to several cultural
+          centres, the city is a must-visit in Kerala.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><i>Kovalam:</i></strong> A small coastal town with some of the
+          best beaches of Kerala, Kovalam is a place where you get to enjoy
+          sunbathing, swimming, herbal body toning massages, special cultural
+          programmes and catamaran cruising.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><i>Wayanad: </i></strong>Dotted with camping sites, trekking
+          trails and gorgeous waterfalls, Wayanad is a peaceful and picturesque
+          hill station that is perfect for holiday in Kerala.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><i>Kumarakom:</i></strong> The favourite place for luxury
+          seekers desiring a holiday on the backwaters of Kerala, Kumarakom is
+          replete with luxury houseboats and resorts promising an experience of
+          a lifetime.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><i>Kozhikode:</i></strong> Home to serene beaches and historic
+          sites, Kozhikode is where Vasco Da Gama landed when he discovered
+          India. The city is a perfect place to get an authentic experience of
+          Kerala.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><i>Thiruvananthapuram:</i></strong> The capital city,
+          Thiruvananthapuram is where you can find authentic Kerala’s food,
+          intriguing sights and a cluster of Victorian museums; it’s a place of
+          many experiences.
+        </p>
+      </li>
+    </ul>
+    <h3>Best Time for Visiting Kerala for Holidays</h3>
+    <p>
+      The best time to visit Kerala is between October and February, when on an
+      average the weather is conducive to go on sightseeing tours and enjoying
+      all the activities offered in the state.
+    </p>
+  </div>
+  <a href="#collapse" class="nav-toggle" id="a1">Read More</a>
+</div>
+<br />
+<section class="section">
+  <hr />
+  <p id="mail"><b>SEND MAIL</b></p>
+  <br />
+  <input
+    type="email"
+    name="mail"
+    id="email"
+    placeholder="ask package details"
+  />
+  <button type="submit" id="button">SEND</button><br /><br /><br />
+</section>
+<footer>
+  <br />
+  Department of Tourism, Government of Kerala, Thiruvananthapuram, Kerala,
+  India<br />
+  Phone:000000000, E-mail: xxxx@gmail.com<br />
+  All rights reserved © Kerala Tourism 2021.<br />
+  <a href="#">Copyright</a>| <a href="#">Terms of Use</a>|
+  <a href="#">Cookie Policy</a>| <a href="#">Contact Us.</a>|<br /><br />
+</footer>
+{% endblock %}

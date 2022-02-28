@@ -1,0 +1,124 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<style>
+  body {
+    background-color: lightgray;
+  }
+  .demo {
+    overflow: hidden;
+    position: relative;
+  }
+  footer {
+    background-color: lightgrey;
+    text-align: center;
+    position: relative;
+  }
+  .heading {
+    text-align: center;
+  }
+  .img {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+  }
+  .img:hover {
+    cursor: pointer;
+  }
+  .demo-content {
+    position: relative;
+  }
+  button {
+    border-radius: 20px;
+    background-color: darkblue;
+    color: white;
+    width: 15%;
+    border-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  section {
+    background-image: url("{% static 'images/places/img_6.png' %}");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    image-resolution: inherit;
+  }
+</style>
+<section>
+  <section class="heading">
+    <h2>PLACES TO VISIT</h2>
+  </section>
+  <br />
+  <div class="container">
+    <div class="row">
+      <div id="m" class="col-sm-4">
+        <div class="demo">
+          <img class="img" src={% static 'images/places/img.png' %}>
+          <div class="demo-content">
+            <h4><i>Neelakurinji blooming season</i></h4>
+          </div>
+        </div>
+        <button type="button">Visit</button>
+      </div>
+      <div id="m" class="col-sm-4">
+        <div class="demo">
+          <img class="img" src="{% static 'images/places/img_1.png' %}" />
+          <div class="demo-content">
+            <h4><i>Periyar Tiger Reserve</i></h4>
+          </div>
+        </div>
+        <button type="button">Visit</button>
+      </div>
+      <div id="m" class="col-sm-4">
+        <div class="demo">
+          <img class="img" src="{% static 'images/places/img_2.png' %}" />
+          <div class="demo-content">
+            <h4><i>Gavi Eco Tourism</i></h4>
+          </div>
+        </div>
+        <button type="button">Visit</button>
+      </div>
+
+      <div id="m" class="col-sm-4">
+        <div class="demo">
+          <img class="img" src="{% static 'images/places/img_3.png' %}" />
+          <div class="demo-content">
+            <h4><i>Jatayu Nature Park</i></h4>
+          </div>
+        </div>
+        <button type="button">Visit</button>
+      </div>
+      <div id="m" class="col-sm-4">
+        <div class="demo">
+          <img class="img" src="{% static 'images/places/img_4.png'%}" />
+          <div class="demo-content">
+            <h4><i>Padmanabha Swamy Temple</i></h4>
+          </div>
+        </div>
+        <button type="button">Visit</button>
+      </div>
+      <div id="m" class="col-sm-4">
+        <div class="demo">
+          <img class="img" src="{% static 'images/places/img_5.png' %}" />
+          <div class="demo-content">
+            <h4><i>Silent Valley National Park</i></h4>
+          </div>
+        </div>
+        <button type="button">Visit</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <br />
+  Department of Tourism, Government of Kerala, Thiruvananthapuram, Kerala,
+  India<br />
+  Phone:000000000, E-mail: xxxx@gmail.com<br />
+  All rights reserved © Kerala Tourism 2021.<br />
+  <a href="#">Copyright</a>| <a href="#">Terms of Use</a>|
+  <a href="#">Cookie Policy</a>| <a href="#">Contact Us.</a>|<br /><br />
+</footer>
+{% endblock %}

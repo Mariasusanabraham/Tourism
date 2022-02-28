@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-image: url("{% static 'images/img_2.png' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-resolution: inherit;
+  }
+  form {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    border: 1px transparent;
+    padding: 50px;
+  }
+  form:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  #reg2 {
+    color: green;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: transparent;
+  }
+  #reg2:hover {
+    background-color: lightgreen;
+    color: black;
+  }
+  #reg {
+    left: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  #reg1 {
+    left: 28px;
+    position: relative;
+    cursor: pointer;
+  }
+</style>
+<form action="/login/" method="post" autocomplete="off">
+  {% csrf_token %}
+  <h2><i>LOGIN HERE</i></h2>
+  <hr />
+  <b>FULLNAME:</b>
+  <input type="text" name="name" id="reg" /><br /><br />
+  <b>PASSWORD:</b>
+  <input type="text" name="password" id="reg1" /><br /><br />
+  <button type="submit" id="reg2"><i class="fas fa-database"></i>LOGIN</button>
+</form>
+
+{% endblock %}
